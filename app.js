@@ -3,23 +3,8 @@ const router = express.Router();
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
-/* 
-it works, but formatting is messed up
 
-const http = require('http')
-const fs = require('fs')
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'content-type': 'text/html' })
-  fs.createReadStream('index.html').pipe(res)
-})
-
-server.listen(process.env.PORT = 3000, () => {
-  console.log(`Server is listening on port: http://localhost:${process.env.PORT}/`)
-})
-*/
-
-// app.use(express.static(path.join(__dirname, "../build")));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -32,6 +17,20 @@ const apiRouter = router.get('/', (req, res) => {
 });
 
 app.use('/', apiRouter);
+
+app.post('/mail.php', (req, res) => {
+  const formData = new FormData([form]);
+  console.log(formData);
+  fetch(
+    'https://contact-joey-ma.herokuapp.com/public/mail.php',
+    {
+      method: 'POST',
+      body: formData
+    }
+  )
+    .then(response => response.json())
+    .then(data => console.log(data))
+});
 
 app.use((req, res) => {
   res.status(404).send('This is the 404 page you\'re looking for...');
