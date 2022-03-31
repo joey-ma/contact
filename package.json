@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "Joey Ma",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.17.3"
   }
 }
