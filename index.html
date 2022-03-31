@@ -15,25 +15,25 @@
     <!--Section Heading-->
     <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Joey</h2>
     <!--Section Description-->
-    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly.</p>
+    <p class="text-center w-responsive mx-auto mb-2">Do you have any questions? Please do not hesitate to contact me directly.</p>
     <div class="row">
       <!-- if multiple columns needed: Grid column 1 -->
       <!-- <div class="col-md-9 mb-md-0 mb-5"> -->
-        <form id="contact-form" name="contact-form" action="./public/mail.php" method="POST">
+        <form id="contact-form" name="contact-form" action="https://contact-joey-ma.herokuapp.com/public/mail.php" method="POST">
           <!--Grid row 1 -->
           <div class="row">
             <!--Grid column 1 -->
             <div class="col-md-6">
               <div class="md-form mb-0">
-                <input type="text" id="name" name="name" class="form-control">
-                <label for="name" class="">Your name</label>
+                <label for="name" hidden>Your name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your name">
               </div>
             </div>
             <!--Grid column 2 -->
             <div class="col-md-6">
               <div class="md-form mb-0">
-                <input type="text" id="email" name="email" class="form-control">
-                <label for="email" class="">Your email</label>
+                <label for="email" hidden>Your email</label>
+                <input type="text" id="email" name="email" class="form-control" placeholder="Your email">
               </div>
             </div>
           </div>
@@ -41,8 +41,8 @@
           <div class="row">
             <div class="col-md-12">
               <div class="md-form mb-0">
-                <input type="text" id="subject" name="subject" class="form-control">
-                <label for="subject" class="">Subject</label>
+                <label for="subject" hidden>Subject</label>
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject">
               </div>
             </div>
           </div>
@@ -51,8 +51,8 @@
             <!--Grid column 1-->
             <div class="col-md-12">
               <div class="md-form">
-                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                <label for="message">Your message</label>
+                <label for="message" hidden>Your message</label>
+                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Message"></textarea>
               </div>
             </div>
           </div>
@@ -64,7 +64,7 @@
       <!-- end of Grid column 1 </div> (if multiple columns were needed) -->
     </div>
     <div class="row">
-      <div class="d-flex justify-content-center links">
+      <div class="d-flex justify-content-center links mt-2">
         <a class="fa-solid fa-coffee fa-2xl" href="https://yoyoyojoe.github.io/contact" rel="noopener noreferrer"></a>
         <a class="fa-brands fa-linkedin fa-2xl" href="https://www.linkedin.com/in/joeyma/" target="_blank" rel="noopener noreferrer"></a>
         <a class="fa-brands fa-github fa-2xl" href="https://github.com/yoyoyojoe" target="_blank" rel="noopener noreferrer"></a>
